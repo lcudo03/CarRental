@@ -12,20 +12,11 @@ public class CarRepository {
     private final List<Car> carList = new ArrayList<>();
 
     public CarRepository() {
-        carList.add(new Car(
-                "WA12345", "Toyota", "Corolla",
-                2020, "Black", 50000, 150.0
-        ));
+        carList.add(new Car("WA12345", "Toyota", "Corolla", 2020, "Black", 50000, 150.0));
 
-        carList.add(new Car(
-                "KR4567A", "Skoda", "Octavia",
-                2021, "Silver", 45000, 180.0
-        ));
+        carList.add(new Car("KR4567A", "Skoda", "Octavia", 2021, "Silver", 45000, 180.0));
 
-        carList.add(new Car(
-                "DW98765", "BMW", "320d",
-                2022, "White", 30000, 250.0
-        ));
+        carList.add(new Car("DW98765", "BMW", "320d", 2022, "White", 30000, 250.0));
     }
 
     public List<Car> findAll() {
@@ -56,10 +47,8 @@ public class CarRepository {
         car.setColor(updatedCar.getColor());
         car.setMileage(updatedCar.getMileage());
         car.setPricePerDay(updatedCar.getPricePerDay());
-
         return car;
     }
-
 
     public List<Car> findAllByBrand(String brand) {
         return carList.stream()
